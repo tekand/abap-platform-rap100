@@ -169,7 +169,7 @@ As *optional* exercises, you can additionally implement the two non-factory, ins
          WITH CORRESPONDING #( keys_with_valid_discount )
          RESULT DATA(travels).
   
-     LOOP AT travels ASSIGNING FIELD-SYMBOL(<travel>).  
+     LOOP AT travels ASSIGNING FIELD-SYMBOL(\<travel\>).  
          DATA(reduced_fee) = <travel>-BookingFee * ( 1 - 3 / 10 ) .  
    
          APPEND VALUE #( %tky       = <travel>-%tky
